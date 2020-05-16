@@ -123,12 +123,18 @@ namespace DungeonAdventure_CSharpConsole
                             Console.WriteLine("");
                         }
                     }
+
+                    if (health < 1)
+                    {
+                        Console.WriteLine("You limp out of the dungeon, weak from battle. Thanks for playing ! ");
+                        running = false;
+                        break;
+                    }
                 } // while (enemyHealth > 0)
 
-                if (health < 1)
+                if (health<1)
                 {
-                    Console.WriteLine("You limp out of the dungeon, weak from battle. Thank for playing ! ");
-                    break;
+                    continue;
                 }
 
                 Console.WriteLine("--------------------------------------------------------");
@@ -148,6 +154,9 @@ namespace DungeonAdventure_CSharpConsole
                     running = false;
                 }                
             } //while (running)
+
+            Console.WriteLine("");
+            Console.WriteLine("Press any key to exit ...");
 
             Console.ReadKey();
         }
