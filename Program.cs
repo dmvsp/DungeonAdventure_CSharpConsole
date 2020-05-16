@@ -44,7 +44,7 @@ namespace DungeonAdventure_CSharpConsole
                 while (enemyHealth > 0 || health < 1 )
                 {
                     Console.WriteLine("\tYour HP: " + health.ToString());
-                    Console.WriteLine("\t" + enemy + "'s HP:" + enemyHealth.ToString());
+                    Console.WriteLine("\t" + enemy + "'s HP: " + enemyHealth.ToString());
                     Console.WriteLine("\n\tWhat you like to do ?");
                     Console.WriteLine("\t1. Attack");
                     Console.WriteLine("\t2. Drink health potion");
@@ -88,7 +88,7 @@ namespace DungeonAdventure_CSharpConsole
 
                                 Console.WriteLine("\t> You drink a health potion, healing youself for " + healthPotionHealthAmount + ".");
                                 Console.WriteLine("\t> You now have " + health + " HP.");
-                                Console.WriteLine("\t> You have " + numHealthPotions + " left.");
+                                Console.WriteLine("\t> You have " + numHealthPotions + " potions left.");
                             }
                             else
                             {
@@ -131,22 +131,22 @@ namespace DungeonAdventure_CSharpConsole
                     break;
                 }
 
-                    Console.WriteLine("--------------------------------------------------------");
-                    Console.WriteLine("What you like to do now ?");
-                    Console.WriteLine("1. Continue fighting");
-                    Console.WriteLine("2. Exit dungeon");
+                Console.WriteLine("--------------------------------------------------------");
+                Console.WriteLine("What you like to do now ?");
+                Console.WriteLine("1. Continue fighting");
+                Console.WriteLine("2. Exit dungeon");
 
-                    var input2 = Console.ReadKey();
+                var input2 = Console.ReadKey();
 
-                    if (input2.KeyChar == '1') 
-                    {
-                        Console.WriteLine("You continue on your adventure !");
-                    }
-                    else
-                    {
-                        Console.WriteLine("You exit the dungeon, successful from your adventures ! Thank you for playing !");
-                        running = false;
-                    }                
+                if (input2.KeyChar == '1') 
+                {
+                    Console.WriteLine("You continue on your adventure !");
+                }
+                else
+                {
+                    Console.WriteLine("You exit the dungeon, successful from your adventures ! Thank you for playing !");
+                    running = false;
+                }                
             } //while (running)
 
             Console.ReadKey();
