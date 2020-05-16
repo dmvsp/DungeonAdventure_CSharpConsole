@@ -138,10 +138,12 @@ namespace DungeonAdventure_CSharpConsole
 
                     var input2 = Console.ReadKey();
 
-                    if (input2.KeyChar == '1') {
+                    if (input2.KeyChar == '1') 
+                    {
                         Console.WriteLine("You continue on your adventure !");
                     }
-                    else {
+                    else
+                    {
                         Console.WriteLine("You exit the dungeon, successful from your adventures ! Thank you for playing !");
                         running = false;
                     }                
