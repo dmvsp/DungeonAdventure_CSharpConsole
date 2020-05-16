@@ -31,7 +31,7 @@ namespace DungeonAdventure_CSharpConsole
 
             bool running = true;
 
-            Console.WriteLine("Welcome to the Dungeon Adventure !");
+            Console.WriteLine(Localization.GetLocalText(Localization.LocalLang.RU, Localization.LocalItem.Welcome));
 
             while (running)
             {
